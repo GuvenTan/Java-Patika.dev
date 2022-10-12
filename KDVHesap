@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        double para,kdv;
+
+
+        System.out.print("Para miktarını giriniz: ");
+        para = input.nextDouble();
+
+        boolean miktar = para <= 1000;
+        double kdvOran = miktar ? 0.18 : 0.08;
+
+        kdv = para * kdvOran;
+
+        double yeniPara = para + kdv;
+
+        System.out.println(yeniPara + " " + kdv);
+
+
+
+    }
+}
