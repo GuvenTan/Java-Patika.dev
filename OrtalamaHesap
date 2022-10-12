@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double matematik,fizik,kimya,turkce,tarih,muzik;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Matematik: ");
+        matematik = input.nextDouble();
+
+        System.out.print("fizik: ");
+        fizik = input.nextDouble();
+
+        System.out.print("kimya: ");
+        kimya = input.nextDouble();
+
+        System.out.print("Türkçe: ");
+        turkce = input.nextDouble();
+
+        System.out.print("tarih: ");
+        tarih = input.nextDouble();
+
+        System.out.print("muzik: ");
+        muzik = input.nextDouble();
+
+        double ort = (matematik+fizik+kimya+turkce+tarih+muzik)/6;
+        boolean gecme = ort >= 60;
+        boolean kalma = ort < 60;
+
+        boolean sonuc = gecme || kalma;
+        String result = sonuc ? "Sınıfı geçti" : "Kaldı";
+
+        System.out.println(result);
+
+
+    }
+}
